@@ -331,9 +331,9 @@ body {
 }
 
 .aulasMusica .professores {
-    margin-top: 50px;
+    margin-top: 2vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 
 }
@@ -341,9 +341,8 @@ body {
 .aulasMusica .professor {
 
 
+    
     color: var(--cor1);
-    padding: 20px;
-    border-radius: 8px;
     text-align: center;
     color: var(--cor5);
 
@@ -354,13 +353,12 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 3vw;
     border: solid 4px var(--cor5);
 }
 
 .aulasMusica .professor:hover {
     transform: scale(1.03);
-    /* box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); */
 }
 
 .aulasMusica h2 {
@@ -638,7 +636,20 @@ body {
     /* Aulas de Música */
     .aulasMusica .professores {
         grid-template-columns: 1fr;
-        /* Coloca os professores em uma só coluna */
+        gap: 15px;
+    }
+
+    .aulasMusica .professor img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .aulasMusica h2 {
+        font-size: 1.5em;
+    }
+
+    .aulasMusica a:hover {
+        font-size: 16px;
     }
 
     /* Footer */
@@ -697,9 +708,20 @@ body {
     }
 
     /* Aulas de Música - Fotos dos Professores */
+    .aulasMusica .container {
+        padding: 20px 0;
+    }
+
+    .aulasMusica .professor {
+        padding: 15px;
+    }
+
+    .aulasMusica h2 {
+        font-size: 1.2em;
+    }
+
     .aulasMusica .professor img {
         width: 70%;
-        /* Reduz o tamanho das fotos dos professores */
     }
 
     /* Footer */
