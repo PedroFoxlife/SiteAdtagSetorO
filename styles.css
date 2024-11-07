@@ -692,7 +692,8 @@ body {
     .bannerFotos,
     .aulasMusica .banner {
         
-        height: 500px;
+        width: 100%; /* Garante que as imagens ocupem a largura completa */
+        max-width: 100%;
     }
 
     /* Aulas de Música - Fotos dos Professores */
