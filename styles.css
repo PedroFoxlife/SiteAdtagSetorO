@@ -25,8 +25,8 @@ body {
 
 .celestial-background {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     background: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
     overflow: hidden;
     z-index: -1;
@@ -331,22 +331,22 @@ body {
 }
 
 .aulasMusica .professores {
-    margin-top: 2vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    margin-top: 50px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content:center;
 
 }
 
 .aulasMusica .professor {
-
-
-    
+ 
     color: var(--cor1);
     text-align: center;
     color: var(--cor5);
-
     transition: transform 0.3s;
+    flex: 1 1 300px;
+    max-width: 300px;;
 }
 
 .aulasMusica .professor img {
@@ -358,7 +358,7 @@ body {
 }
 
 .aulasMusica .professor:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .aulasMusica h2 {
@@ -369,6 +369,7 @@ body {
 .image-container {
     position: relative;
     width: 100%;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -634,23 +635,10 @@ body {
     }
 
     /* Aulas de Música */
-    .aulasMusica .professores {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .aulasMusica .professor img {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .aulasMusica h2 {
-        font-size: 1.5em;
-    }
-
-    .aulasMusica a:hover {
-        font-size: 16px;
-    }
+    .aulasMusica .professor { 
+        flex: 1 1 100%; 
+         max-width: none; 
+        }
 
     /* Footer */
     .footer-content {
@@ -708,21 +696,12 @@ body {
     }
 
     /* Aulas de Música - Fotos dos Professores */
-    .aulasMusica .container {
-        padding: 20px 0;
-    }
+   
+    .aulasMusica .professor { 
+        flex: 1 1 100%; 
+         max-width: none; 
+        }
 
-    .aulasMusica .professor {
-        padding: 15px;
-    }
-
-    .aulasMusica h2 {
-        font-size: 1.2em;
-    }
-
-    .aulasMusica .professor img {
-        width: 70%;
-    }
 
     /* Footer */
     .social-icons img {
