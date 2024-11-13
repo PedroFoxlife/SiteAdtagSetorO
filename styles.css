@@ -147,6 +147,7 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .carousel-container {
@@ -189,6 +190,7 @@ body {
 
 
 .bannerAgenda {
+    margin-top: 0px;
     max-width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
     
@@ -450,8 +452,10 @@ body {
     text-decoration: underline;
 }
 
-.social-icons {
-    display: flex;
+.social-icons { 
+    display: flex; 
+    justify-content: center; /* Ajuste para centralizar os ícones */ 
+    flex-wrap: wrap; 
 }
 
 .social-icons img {
@@ -579,6 +583,7 @@ body {
         flex-direction: column;
         /* Empilha os itens no header */
         padding: 5px 0;
+        
     }
 
     /* Exibe o ícone de hambúrguer em telas pequenas */
@@ -610,6 +615,9 @@ body {
     /* Estilo para cada link no menu para ocupar a largura completa */
     .nav-item {
         margin: 10px 0;
+    }
+    .bannerDestaques{
+        margin-top: 90px;
     }
 
     /* Carrossel */
@@ -663,6 +671,7 @@ body {
     /* Header */
     .header {
         padding: 5px;
+        
     }
 
     .logo {
@@ -695,6 +704,10 @@ body {
         max-width: 100%;
     }
 
+    .bannerDestaques{
+        margin-top: 70px;
+    }
+
     /* Aulas de Música - Fotos dos Professores */
    
     .aulasMusica .professor { 
@@ -704,8 +717,11 @@ body {
 
 
     /* Footer */
-    .social-icons img {
-        width: 40px;
+    .footer-section .social-icons img {
+
+       justify-content: center;
+       width: 40px;
         /* Ajusta o tamanho dos ícones de rede social */
     }
+
 }
