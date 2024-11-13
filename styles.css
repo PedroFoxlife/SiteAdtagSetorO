@@ -138,6 +138,12 @@ body {
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
 
 }
+.bannerDestaquesPequeno {
+    display: none;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+
+}
 
 
 .carousel-section {
@@ -190,6 +196,14 @@ body {
 
 
 .bannerAgenda {
+    margin-top: 0px;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+}
+
+.bannerAgendaPequeno {
+    display: none;
     margin-top: 0px;
     max-width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
@@ -291,7 +305,11 @@ body {
     max-width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
 }
-
+.bannerFotosPequeno {
+    display: none;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+}
 .fotos {
     margin: 50px 50px;
 }
@@ -329,6 +347,12 @@ body {
     max-width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
 
+
+}
+.aulasMusica .bannerPequeno {
+    display: none;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
 
 }
 
@@ -617,7 +641,16 @@ body {
         margin: 10px 0;
     }
     .bannerDestaques{
+        display: none;
         margin-top: 90px;
+    }
+    .bannerDestaquesPequeno {
+       
+        margin-top: 70px;
+        display: block;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
     }
 
     /* Carrossel */
@@ -631,6 +664,18 @@ body {
         font-size: 40px;
         /* Reduz o tamanho do título */
     }
+    .bannerAgenda{
+        display: none;
+    }
+    .bannerAgendaPequeno {
+       
+        margin-top: 70px;
+        display: block;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+    }
+
 
     #agenda-semanal .subtitulo {
         font-size: 18px;
@@ -641,8 +686,30 @@ body {
         grid-template-columns: 1fr;
         /* Coloca as colunas em uma só coluna */
     }
+    .bannerFotos {
+        display: none;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    }
+    .bannerFotosPequeno {
+        display: block;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    }
 
     /* Aulas de Música */
+    .aulasMusica .banner {
+        display: none;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+    }
+    .aulasMusica .bannerPequeno {
+        display: block;
+        max-width: 100%;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+    }
     .aulasMusica .professor { 
         flex: 1 1 100%; 
          max-width: none; 
@@ -705,8 +772,10 @@ body {
     }
 
     .bannerDestaques{
+        display: none;
         margin-top: 70px;
     }
+    
 
     /* Aulas de Música - Fotos dos Professores */
    
