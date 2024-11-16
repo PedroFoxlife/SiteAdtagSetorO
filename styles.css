@@ -144,8 +144,6 @@ body {
     box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
 
 }
-
-
 .carousel-section {
     margin-top: 20px;
     width: 100%;
@@ -171,20 +169,26 @@ body {
 .carousel img:hover {
     transform: scale(1.05);
 }
-
-.bt-insta {
-    color: var(--cor5);
-    width: 100%;
-    font-size: larger;
-    text-decoration: none;
-    align-items: center;
-    font-weight: bold;
-    transition: transform 0.5s ease-in-out;
+.carousel-wrapper {
+    position: relative;
 }
 
-.bt-insta:hover {
-    transform: scale(1.05);
-    color: var(--cor4);
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.4); /* Cor de fundo da barra */
+    z-index: 10;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: #ff6600; /* Cor do progresso */
+    transition: width 0.5s linear;
 }
 
 
@@ -484,11 +488,12 @@ body {
 
 .social-icons img {
     width: 70px;
-    transition: transform 0.5s ease-in-out
+    transition: transform 0.4s ease-in-out;
 }
 
 .social-icons img:hover {
-    width: 80px;
+    transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+    width: 75px;
 }
 
 .social-icons a {
@@ -506,6 +511,7 @@ body {
 
 
 #scrollTopBtn {
+    border: solid 1px;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -515,14 +521,19 @@ body {
     background-color: var(--cor5);
     color: var(--cor1);
     font-size: 24px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-    transition: opacity 0.3s;
+    z-index: 20;
+    transition: transform 0.4s ease-in-out;
+
+
 }
 
 #scrollTopBtn:hover {
+    transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
     background-color: var(--cor1);
     color: var(--cor5);
 }
@@ -669,7 +680,6 @@ body {
     }
     .bannerAgendaPequeno {
        
-        margin-top: 70px;
         display: block;
         max-width: 100%;
         box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);

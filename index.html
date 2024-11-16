@@ -15,7 +15,7 @@
 <body>
 
     <header class="header">
-        <a href="#"><img class="logo" src="./assents/img/LOGOB.png" alt="Logo"></a>
+        <a href="#home"><img class="logo" src="./assents/img/LOGOB.png" alt="Logo"></a>
         <nav>
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -41,6 +41,8 @@
                 <div><img src="./assents/img/Banner5.jpg" alt="Imagem 2"></div>
                 <div><img src="./assents/img/banner6.jpg" alt="Imagem 3"></div>
             </div>
+            <!-- <div class="progress-bar"></div> -->
+
         </div>
 
     </section>
@@ -52,8 +54,8 @@
         <div class="container">
             <div class="eventos">
                 <div class="evento">
-                    <img src="./assents/img/EBD.png" alt="EBA - Escola Bíblica Amar">
-                    <h4>EBA - Escola Bíblica Amar</h4>
+                    <img src="./assents/img/EBD.png" alt="EBD - Escola Bíblica Dominical">
+                    <h4>EBA - Escola Bíblica Dominical</h4>
                     <p>Domingo | 10:00 às 11:00</p>
                     <p>Venha estudar a palavra de Deus com a gente. Terá turmas para todas as idades.</p>
                 </div>
@@ -181,8 +183,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <p>Email: contato@exemplo.com</p>
-                    <p>Telefone: (61) 99999-9999</p>
+                    <p>Email: adtago@gmal.com</p>
                     <p>Endereço: EQNO 3/5 AE.Ceilândia Norte - DF</p>
                 </div>
                 <div class="footer-section">
@@ -196,10 +197,8 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Siga-nos</h3>
+                    <h3>Siga-nos:</h3>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/groups/609034229953022" target="_blank"><img
-                                src="./assents/img/face.png" alt="Facebook"></a>
                         <a href="https://www.instagram.com/adtagsetoro/" target="_blank"><img
                                 src="./assents/img/insta.png" alt="Instagram"></a>
                         <a href="https://www.youtube.com/@IgrejaAdtagSetorO" target="_blank"><img
@@ -221,15 +220,34 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('.carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 1000,
-                slidesToShow: 1,
-                adaptiveHeight: true
-            });
-        });
+ $(document).ready(function () {
+    var progressBar = $('.progress-bar span'); // Seletor para a barra de progresso
+
+    // Inicializa o carrossel com o autoplay
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 3000, // Tempo entre cada slide
+        pauseOnHover: false, // Não pausa ao passar o mouse
+        beforeChange: function (event, slick, currentSlide, nextSlide) {
+            // Resetar a barra de progresso antes de cada troca
+            progressBar.css('width', '0');
+        },
+        afterChange: function (event, slick, currentSlide) {
+            // Inicia a animação de progresso após a mudança do slide
+            progressBar.css('transition', 'none');
+            setTimeout(function () {
+                progressBar.css('transition', 'width 3s linear'); // Definir o tempo de transição
+                progressBar.css('width', '100%');
+            }, 100); // Aguarda um pouco para garantir que a animação funcione corretamente
+        }
+    });
+});
+
 
         function createStar() {
             const star = document.createElement('div');
