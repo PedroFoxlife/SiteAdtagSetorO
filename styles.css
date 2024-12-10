@@ -390,7 +390,7 @@ body {
     height: auto;
     border-radius: 50%;
     margin-bottom: 3vw;
-    border: solid 4px var(--cor5);
+
 }
 
 .aulasMusica .professor:hover {
@@ -410,9 +410,10 @@ body {
 }
 
 .image-container img {
-    width: 100%;
+    width: 50%;
     height: auto;
     transition: opacity 0.5s ease;
+    object-fit: contain;
 }
 
 .image-container img.top-image {
@@ -440,6 +441,119 @@ body {
 }
 
 
+
+
+/* Departamentos */
+
+
+
+
+.departamentos {
+    margin-top: 0px;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+}
+
+.bannerAgendaPequeno {
+    display: none;
+    margin-top: 0px;
+    max-width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0.5, 0.5);
+    
+}
+
+#departamentos {
+    padding: 50px 0;
+    text-align: center;
+    color: var(--cor5);
+}
+
+#departametos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0 15px;
+}
+
+#departamentos h2 {
+    font-size: 50px;
+    color: var(--cor5);
+    margin-bottom: 20px;
+}
+
+
+#departamentos .boxDp {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#departamentos .dps {
+    background-color: var(--cor5);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 
+        0 4px 8px   rgba(0, 0, 0, 0.2),
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 15px 40px rgba(0, 0, 0, 0.1);
+    /* Sombras em camadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lideres{
+    
+    display: flex;
+    gap: 80px;
+}
+
+.lideres h3{ 
+    margin-top: 30px;
+    color: var(--cor1);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.lider img{
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 8px;
+}
+
+#departamentos .dps img {
+    max-width: 500px;
+    
+}
+
+#departamentos .dps h1 {
+    color: var(--cor1);
+    margin-bottom: 10px;
+}
+
+
+#departamentos .dps h4 {
+    color: var(--cor1);
+    margin-bottom: 10px;
+}
+
+
+
+#departamentos .dps:hover img {
+    filter: brightness(0.9);
+}
+.programacaoJ {
+    margin-top: 20px;
+}
+
+.programacaoJ video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Para cantos arredondados */
+}
 
 
 
@@ -488,7 +602,7 @@ body {
 
 .social-icons { 
     display: flex; 
-    justify-content: center; /* Ajuste para centralizar os ícones */ 
+    justify-content: center;  
     flex-wrap: wrap; 
 }
 
@@ -625,6 +739,9 @@ body {
         /* Empilha os itens no header */
         padding: 5px 0;
         
+    }
+    .header img{
+        width: 150px;
     }
 
     /* Exibe o ícone de hambúrguer em telas pequenas */
@@ -800,6 +917,10 @@ body {
          max-width: none; 
         }
 
+    /* departamentos */
+.lideres{
+    gap: 10px;
+}
 
     /* Footer */
     .footer-section .social-icons img {
